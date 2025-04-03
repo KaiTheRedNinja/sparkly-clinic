@@ -2,6 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('../public/fonts/GlacialIndifference-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('../public/fonts/GlacialIndifference-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Apply the font family to all elements */
+* {
+  font-family: 'Glacial Indifference', sans-serif;
+}
+
+/* Heading styles */
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Body text */
+body, p {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+/* Caption styling - typically used with figcaption element */
+figcaption {
+  font-weight: normal;
+  font-size: 15px;
+}
+
+/* Alternative caption styling for when you use a div or p with a class */
+.caption {
+  font-weight: normal;
+  font-size: 15px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

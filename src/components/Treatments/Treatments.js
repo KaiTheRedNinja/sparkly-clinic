@@ -1,6 +1,27 @@
 import React from 'react';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
+const Card = ({ title, body, image, altText }) => {
+    return (
+      <div className="w-full rounded-lg shadow-md bg-[#DAEBD6] overflow-hidden">
+        {image && (
+          <div className="w-full bg-white">
+            <img 
+              src={image || "/api/placeholder/320/180"} 
+              alt={altText || "Card image"} 
+              className="w-full h-40 object-cover"
+            />
+          </div>
+        )}
+        <div className="p-4 text-left">
+          <h3 className="font-bold text-lg text-gray-800 mb-2">{title}</h3>
+          <p className="text-gray-600 mb-4">{body}</p>
+          <p className="text-gray-500 underline cursor-pointer">See more</p>
+        </div>
+      </div>
+    );
+  };
+
 const Treatments = () => {
     return (
         <section className="w-full bg-[#FAF7ED] py-8 px-4 md:py-16 md:px-8">
@@ -15,12 +36,12 @@ const Treatments = () => {
                 gutterBreakpoints={{350: "12px", 750: "16px", 900: "24px"}}
             >
                 <Masonry>
-                    {/* repeat this five times */}
-                    {[...Array(5)].map((_, index) => (
-                        <img 
-                        src="/api/placeholder/200/200" 
-                        alt="Sample" 
-                        className="rounded-2xl shadow-lg mb-4 w-full sm:max-w-xs md:max-w-xs"
+                    {[...Array(20)].map((_, index) => (
+                        <Card
+                            title="Beautiful Mountains"
+                            body="Explore the majestic mountain landscapes that will take your breath away."
+                            image={index%2 == 0 ? "/api/placeholder/320/180" : ""}
+                            altText="Mountain landscape"
                         />
                     ))}
                 </Masonry>

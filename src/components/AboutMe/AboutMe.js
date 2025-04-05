@@ -6,7 +6,7 @@ import researchGate from '../../assets/researchGate.jpeg';
 const AboutMe = () => {
   return (
     <section className="w-full bg-[#FFEEFE] py-8 px-4 md:py-16 md:px-8">
-      <div className="p-4 max-w-6xl mx-auto">
+      <div className="p-4 lg:max-w-[70%] mx-auto">
       <div className="relative">
         <img 
           src={profile}

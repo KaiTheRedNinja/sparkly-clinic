@@ -1,11 +1,12 @@
 import './App.css';
 import AboutMe from './components/AboutMe/AboutMe';
+import Treatments from './components/Treatments/Treatments';
 
 function App() {
   return (
     <div className="App">
       <AboutMe />
-      {/* Add other sections of your website here */}
+      <Treatments />
     </div>
   );
 }

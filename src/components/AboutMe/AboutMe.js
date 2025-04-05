@@ -11,7 +11,7 @@ const AboutMe = () => {
         <img 
           src={profile}
           alt="Lee Ye Le's Profile" 
-          className="float-left mr-8 mb-4 w-full max-w-xs mx-auto object-cover rounded-2xl shadow-lg"
+          className="rounded-2xl shadow-lg md:float-left mr-8 mb-4 w-full sm:max-w-xs md:max-w-xs"
         />
         {/* Name - Top right on desktop */}
         <h1 className="mb-2 text-left md:text-left">

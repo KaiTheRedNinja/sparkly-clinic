@@ -45,9 +45,8 @@ const Reviews = () => {
     <div className="p-4 lg:max-w-[70%] mx-auto">
       <div className="relative">
         <h1 className="mb-2 text-left md:text-left">
-            Services and Treatments
+            Reviews
         </h1>
-        {/* Add content for treatments here */}
         {isMobileView ? (
           <div className="overflow-x-auto mx-[-32px]">
             <div className="flex flex-nowrap px-[20px]">

@@ -32,6 +32,24 @@ const TreatmentCard = ({ condition, onSeeMore }) => {
 };
 
 const Treatments = () => {
+  const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
+  const [windowWidth, setWindowWidth] = React.useState(isMobile ? 0 : 1000);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const isMobileView = windowWidth < 768;
+
   return (
     <section className="w-full bg-[#FAF7ED] py-8 px-4 md:py-16 md:px-8">
     <div className="p-4 lg:max-w-[70%] mx-auto">
@@ -40,16 +58,28 @@ const Treatments = () => {
           Services and Treatments
       </h1>
       {/* Add content for treatments here */}
-      <ResponsiveMasonry
-          columnsCountBreakPoints={{300: 1, 600: 2, 900: 3, 1200: 4}}
-          gutterBreakpoints={{350: "12px", 750: "16px", 900: "24px"}}
-      >
-        <Masonry>
-          {medicalConditions.map((condition, _) => (
-            <TreatmentCard condition={condition} onSeeMore={(id) => console.log(`See more about condition with id: ${id}`)} key={condition.id} />
-          ))}
-        </Masonry>
-      </ResponsiveMasonry>
+      {isMobileView ? (
+          <div className="overflow-x-auto mx-[-32px]">
+            <div className="flex flex-nowrap px-[20px]">
+              {medicalConditions.map((condition) => (
+                <div className="flex-shrink-0 w-[300px] md:w-1/2 lg:w-1/3 p-2" key={condition.id}>
+                  <TreatmentCard condition={condition} />
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <ResponsiveMasonry
+            columnsCountBreakPoints={{300: 1, 600: 2, 900: 3, 1200: 4}}
+            gutterBreakpoints={{350: "12px", 750: "16px", 900: "24px"}}
+          >
+            <Masonry>
+              {medicalConditions.map((condition, _) => (
+                <TreatmentCard condition={condition} onSeeMore={(id) => console.log(`See more about condition with id: ${id}`)} key={condition.id} />
+              ))}
+            </Masonry>
+          </ResponsiveMasonry>
+        )}
       </div>
     </div>
     </section>

@@ -28,31 +28,29 @@ const AboutMe = () => {
         {/* About Text - Wraps around on desktop */}
         <div className="text-gray-700 space-y-4 text-left">
           <p className="leading-relaxed">
-            Dr Lee Le Ye graduated from the National University of Singapore and obtained her speciality 
-            qualifications in paediatrics and sub-specialised in neonatology. She undertook the graduate 
-            diploma in palliative medicine in 2024. She was a senior consultant with the Department of 
-            Neonatology at the National University Healthcare System, Singapore. Her work involves 
-            managing both inpatient neonatal care as well as palliative care for stillbirths, neonates 
-            and also paediatric patients. Her clinical interests include neonatal screening programmes 
-            and nutritional management of Very Low Birth weights (VLBWs) infants as well as term neonates. 
+            Dr Lee Le Ye graduated from the National University of Singapore and obtained her speciality
+            qualifications in paediatrics and sub-specialised in neonatology. She undertook the graduate diploma
+            in palliative medicine in 2024. She was a senior consultant with the Department of Neonatology at
+            the National University Healthcare System, Singapore. Her work involves managing both inpatient
+            neonatal care as well as palliative care for stillbirths, neonates and also paediatric patients. Her
+            clinical interests include neonatal screening programmes and nutritional management of Very Low
+            Birth weights (VLBWs) infants as well as term neonates.
           </p>
           <p className="leading-relaxed">
-            She has also started a programme for alternative care plan for infants with palliative care 
-            needs and stillbirths. She held the title of Assistant Professor and was on the teaching 
-            paediatric faculty for the Yong Loo Lin School of Medicine, National University of Singapore. 
-            She had obtained numerous grants on neonatal jaundice, hepatitis B vertical transmission, 
-            covid-19 vertical transmission and also newborn nutrition. She has published on these topics 
-            in both local and international peer reviewed journals as well as book chapters. She hopes to
-            be able to provide end of life care for those who required these and support these families 
-            during the stressful period to let them see the next rainbow.
+            She has also started a programme for
+            alternative care plan for infants with palliative care needs and stillbirths. She held the title of
+            Assistant Professor and was on the teaching paediatric faculty for the Yong Loo Lin School of
+            Medicine, National University of Singapore. She had obtained numerous grants on neonatal
+            jaundice, hepatitis B vertical transmission, covid-19 vertical transmission and also newborn
+            nutrition. She has published on these topics in both local and international peer reviewed journals as
+            well as book chapters. She hopes to be able to provide end of life care for those who required these
+            and support these families during the stressful period to let them see the next rainbow.
           </p>
           <p className="leading-relaxed">
-            Outside her work, Dr Lee has 
-            been an active volunteer with Hospice Care Association since 2020 and had participated in the 
-            Weekend Warrior, Oasis Day Care and also Virgil Angel program. She had also volunteered in 
-            Ang Kor Children’s Hospital (Siem Reap) and Chenla Children’s Healthcare, Kratie for skills 
-            teaching at their neonatal units. Her hobbies include cycling and fund raising during these 
-            activities, solving puzzles and also reading.
+            Outside her work, Dr Lee has been an active volunteer with Hospice Care Association since 2020 and
+            had participated in the Weekend Warrior, Oasis Day Care and also Virgil Angel program. She had also
+            volunteered in Ang Kor Children’s Hospital (Siem Reap) and Chenla Children’s Healthcare, Kratie for
+            skills teaching at their neonatal units. Her hobbies include cycling and fund raising during these activities, solving puzzles and also reading.
           </p>
           {/* Add more paragraphs as needed */}
         </div>
@@ -62,11 +60,23 @@ const AboutMe = () => {
             src={linkedIn}
             alt="LinkedIn"
             className="w-12 h-12 rounded-xl shadow-lg"
+            onClick={() => window.open('https://linkedin.com/in/le-ye-lee-929992113', '_blank')}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                window.open('https://linkedin.com/in/le-ye-lee-929992113', '_blank');
+              }
+            }}
           />
           <img 
             src={researchGate}
             alt="Research Gate"
             className="w-12 h-12 rounded-xl shadow-lg"
+            onClick={() => window.open('https://www.researchgate.net/profile/Le-Lee', '_blank')}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                window.open('https://www.researchgate.net/profile/Le-Lee', '_blank');
+              }
+            }}
           />
         </div>
       </div>

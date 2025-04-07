@@ -20,8 +20,10 @@ const AboutMe = () => {
         
         {/* Titles - Below name */}
         <div className="mb-6 text-left md:text-left">
-          <h3 className="">Consultant Neonatologist/Paediatrician, MBBS(S'pore), MMed (Paed Med), GDPM (S'pore) MRCPCH (UK), FAMS (S'pore)</h3>
-          <h3 className="">Medical director at SPARK (Singapore PAediatric caRe for Kids) Pte Ltd</h3>
+          <h3 className="">Consultant Neonatologist/Paediatrician</h3>
+          <h3 className="">MBBS(S'pore), MMed (Paed Med), GDPM (S'pore)</h3>
+          <h3 className="">MRCPCH (UK), FAMS (S'pore)</h3>
+          <h3 className="">Medical director at SPARK (Singapore PAediatric caRe for Kids)</h3>
           {/* Add more titles as needed */}
         </div>
         
@@ -59,7 +61,7 @@ const AboutMe = () => {
           <img
             src={linkedIn}
             alt="LinkedIn"
-            className="w-12 h-12 rounded-xl shadow-lg"
+            className="w-12 h-12 rounded-xl shadow-lg cursor-pointer"
             onClick={() => window.open('https://linkedin.com/in/le-ye-lee-929992113', '_blank')}
             onKeyDown={(e) => {
               if (e.key === 'Enter') {
@@ -70,7 +72,7 @@ const AboutMe = () => {
           <img 
             src={researchGate}
             alt="Research Gate"
-            className="w-12 h-12 rounded-xl shadow-lg"
+            className="w-12 h-12 rounded-xl shadow-lg cursor-pointer"
             onClick={() => window.open('https://www.researchgate.net/profile/Le-Lee', '_blank')}
             onKeyDown={(e) => {
               if (e.key === 'Enter') {

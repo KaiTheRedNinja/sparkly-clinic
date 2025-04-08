@@ -1,31 +1,44 @@
 import React from 'react';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-import { medicalConditions, medicalConditionsFlat } from "../../data/medicalConditions.js";
+import { medicalConditions } from "../../data/medicalConditions.js";
 
 // TODO: Split into Problems of Well Babies and Problems requiring intensive care
 
 const TreatmentCard = ({ condition, onSeeMore }) => {
   return (
-    <div className="w-full rounded-lg shadow-md bg-[#DAEBD6] overflow-hidden">
-      {condition.imagePath && (
+    <div className="max-h-[350px] w-full rounded-lg shadow-md bg-[#DAEBD6] overflow-hidden relative">
+      {(condition.imagePaths && condition.imagePaths.length > 0) && (
         <div className="w-full bg-white">
           <img 
-            src={condition.imagePath} 
+            src={condition.imagePaths[0]}
             alt={`${condition.conditionName} visual`} 
             className="w-full h-40 object-cover"
           />
         </div>
       )}
+
+      {/* title and description */}
       <div className="p-4 text-left">
         <h3 className="font-bold text-lg text-gray-800 mb-2">{condition.conditionName}</h3>
-        <div className="max-h-[200px] overflow-hidden relative mb-4">
+        <div className="overflow-hidden relative mb-4">
           <p className="text-gray-600">{condition.doctorsInvolvement}</p>
-          <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#DAEBD6] to-transparent flex items-end">
-            <span className="text-gray-500"></span>
-          </div>
         </div>
-        <p 
-          className="text-gray-500 underline cursor-pointer" 
+      </div>
+
+      {/* trail off shadow */}
+      <div className="absolute bottom-0 w-full">
+        <div className="absolute bottom-10 left-0 right-0 h-16 bg-gradient-to-t from-[#DAEBD6] to-transparent flex">
+          <span className="text-gray-500"></span>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-10 bg-[#DAEBD6] flex">
+          <span className="text-gray-500"></span>
+        </div>
+      </div>
+
+      {/* see more text */}
+      <div className="absolute bottom-0 w-full">
+        <p
+          className="text-gray-500 underline cursor-pointer p-4 z-40" 
           onClick={() => onSeeMore(condition.id)}
         >See more</p>
       </div>

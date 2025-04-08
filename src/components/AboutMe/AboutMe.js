@@ -1,7 +1,4 @@
 import React from 'react';
-import profile from '../../assets/profile.jpeg';
-import linkedIn from '../../assets/linkedIn.png';
-import researchGate from '../../assets/researchGate.jpeg';
 
 const AboutMe = () => {
   return (
@@ -9,7 +6,7 @@ const AboutMe = () => {
       <div className="p-4 lg:max-w-[70%] mx-auto">
       <div className="relative">
         <img 
-          src={profile}
+          src="./assets/profile.jpeg"
           alt="Lee Ye Le's Profile" 
           className="rounded-2xl shadow-lg md:float-left mr-8 mb-4 w-full sm:max-w-xs md:max-w-xs"
         />
@@ -59,7 +56,7 @@ const AboutMe = () => {
 
         <div className="flex mt-4 space-x-4">
           <img
-            src={linkedIn}
+            src="./assets/linkedIn.png"
             alt="LinkedIn"
             className="w-12 h-12 rounded-xl shadow-lg cursor-pointer"
             onClick={() => window.open('https://linkedin.com/in/le-ye-lee-929992113', '_blank')}
@@ -70,7 +67,7 @@ const AboutMe = () => {
             }}
           />
           <img 
-            src={researchGate}
+            src="./assets/researchGate.jpeg"
             alt="Research Gate"
             className="w-12 h-12 rounded-xl shadow-lg cursor-pointer"
             onClick={() => window.open('https://www.researchgate.net/profile/Le-Lee', '_blank')}

@@ -66,7 +66,7 @@ const Treatments = () => {
   const isMobileView = windowWidth < 768;
 
   return (
-    <section className="w-full bg-[#FAF7ED] py-8 px-4 md:py-16 md:px-8">
+    <section id="treatments" className="w-full bg-[#FAF7ED] py-8 px-4 md:py-16 md:px-8">
     <div className="p-4 lg:max-w-[70%] mx-auto">
       <div className="relative">
       <h1 className="mb-2 text-left md:text-left">

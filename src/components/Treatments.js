@@ -1,6 +1,6 @@
 import React from 'react';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-import { medicalConditions } from "../../data/medicalConditions.js";
+import { medicalConditions } from "../data/medicalConditions.js";
 
 // TODO: Split into Problems of Well Babies and Problems requiring intensive care
 

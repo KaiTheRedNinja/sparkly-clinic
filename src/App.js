@@ -1,9 +1,10 @@
 import './App.css';
-import Header from './components/Header/Header';
-import AboutMe from './components/AboutMe/AboutMe';
-import Treatments from './components/Treatments/Treatments';
-import Reviews from './components/Reviews/Reviews';
-import Footer from './components/Footer/Footer';
+import Header from './components/Header';
+import AboutMe from './components/AboutMe';
+import Treatments from './components/Treatments';
+import Reviews from './components/Reviews';
+import ContactMe from './components/ContactMe';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <AboutMe />
       <Treatments />
       <Reviews />
+      <ContactMe />
       <Footer />
     </div>
   );

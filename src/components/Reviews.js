@@ -1,6 +1,6 @@
 import React from 'react';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-import reviews from "../../data/reviews.js";
+import reviews from "../data/reviews.js";
 
 const ReviewCard = ({ review }) => {
   return (

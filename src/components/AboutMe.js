@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutMe = () => {
   return (
-    <section id="aboutme" className="w-full bg-[#FFEEFE] py-8 px-4 md:py-16 md:px-8">
+    <section id="aboutme" className="w-full bg-[#DAEBD6] py-8 px-4 md:py-16 md:px-8">
       <div className="p-4 lg:max-w-[70%] mx-auto">
       <div className="relative">
         <img 

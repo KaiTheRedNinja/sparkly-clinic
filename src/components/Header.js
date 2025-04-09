@@ -23,7 +23,7 @@ const Header = () => {
     },
     {
         name: 'Contact',
-        id: 'contact',
+        id: 'contactme',
     }
   ]
 

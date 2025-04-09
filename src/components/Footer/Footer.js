@@ -11,8 +11,8 @@ const Footer = () => {
         </div>
 
         {/* Address with pin emoji and gray square */}
-        <div className="flex items-start mb-3">
-          <div className="w-8 text-center pt-1 select-none">📍</div>
+        <div className="flex items-start mb-3" onClick={() => window.open('https://maps.app.goo.gl/omKfaqHqrSPN3oFR8', '_blank')}>
+          <div className="w-8 text-center pt-1 select-none cursor-pointer">📍</div>
           <div className="ml-4 flex-1">
             <p>Level 2, Health Screening Centre</p>
             <p>St. Anne Mother and Child Centre</p>
@@ -21,19 +21,19 @@ const Footer = () => {
         </div>
 
         {/* Email with letter emoji */}
-        <div className="flex items-center mb-3">
-          <div className="w-8 text-center select-none cursor-default">💌</div>
+        <div className="flex items-center mb-3" onClick={() => window.open('mailto:hsc@mtalvernia.sg', '_blank')}>
+          <div className="w-8 text-center select-none cursor-pointer">💌</div>
           <div className="ml-4">
             <p>hsc@mtalvernia.sg</p>
           </div>
         </div>
 
         {/* Whatsapp number with chat icon */}
-        <div className="flex items-center mb-3">
+        <div className="flex items-center mb-3" onClick={() => window.open('https://wa.me/6598191303', '_blank')}>
           <img
             src="./assets/whatsapp.png"
             alt="WhatsApp"
-            className="w-6 h-6 ml-1" // Adjusted size for better alignment
+            className="w-6 h-6 ml-1 cursor-pointer" // Adjusted size for better alignment
           />
           <div className="ml-4">
             <p>+65 9819 1303</p>
@@ -41,8 +41,8 @@ const Footer = () => {
         </div>
 
         {/* Phone number with phone icon */}
-        <div className="flex items-center mb-3">
-        <div className="w-8 text-center select-none cursor-default">☎️</div>
+        <div className="flex items-center mb-3" onClick={() => window.open('tel:+6562476215', '_blank')}>
+        <div className="w-8 text-center select-none cursor-pointer">☎️</div>
           <div className="ml-4">
             <p>+65 6247 6215</p>
           </div>
@@ -52,7 +52,7 @@ const Footer = () => {
         <div className="flex items-center mb-8" title="Fax"> {/* Added mb-6 for vertical space */}
         <div className="w-8 text-center select-none cursor-default">📠</div>
           <div className="ml-4">
-            <p>+65 6250 6481</p>
+            <p>+65 6250 6481 (for fax)</p>
           </div>
         </div>
 

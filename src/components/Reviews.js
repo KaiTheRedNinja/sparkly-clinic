@@ -4,7 +4,7 @@ import reviews from "../data/reviews.js";
 
 const ReviewCard = ({ review }) => {
   return (
-    <div className="w-full rounded-lg shadow-md bg-[#FAF7ED] overflow-hidden">
+    <div className="w-full rounded-xl shadow-md bg-[#FAF7ED] overflow-hidden">
       {review.imagePath && (
         <div className="w-full bg-white">
           <img 

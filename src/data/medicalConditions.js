@@ -126,4 +126,4 @@ export const medicalConditions = [
   }
 ]
 
-export const medicalConditionsFlat = wellBabyProblems + veryLowBirthWeightProblems + intensiveCareProblems;
+export const medicalConditionsFlat = wellBabyProblems.concat(veryLowBirthWeightProblems, intensiveCareProblems)

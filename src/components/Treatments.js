@@ -6,7 +6,7 @@ import { medicalConditions } from "../data/medicalConditions.js";
 
 const TreatmentCard = ({ condition, onSeeMore }) => {
   return (
-    <div className="max-h-[350px] w-full rounded-lg shadow-md bg-[#DAEBD6] overflow-hidden relative">
+    <div className="max-h-[350px] w-full rounded-xl shadow-md bg-[#DAEBD6] overflow-hidden relative">
       {(condition.imagePaths && condition.imagePaths.length > 0) && (
         <div className="w-full bg-white">
           <img 

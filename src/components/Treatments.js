@@ -86,7 +86,7 @@ const PopoverSheet = ({ condition, onClose }) => {
                 <div key={index} className="flex-none">
                   <img 
                     src={image} 
-                    alt={`${condition.conditionName} - Image ${index + 1}`}
+                    alt={`${condition.conditionName} - ${index + 1}`}
                     className="h-64 w-auto object-cover rounded shadow-md"
                   />
                 </div>
@@ -149,7 +149,7 @@ const Treatments = () => {
       const hash = window.location.hash;
       if (hash && hash.startsWith('#')) {
         const itemId = hash.substring(1);
-        const item = medicalConditionsFlat.find(item => item.id === itemId);
+        const item = medicalConditionsFlat.find(item => String(item.id) === itemId);
         if (item) {
           setSelectedItem(item);
         }

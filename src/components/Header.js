@@ -95,22 +95,20 @@ const Header = () => {
             </button>
 
             {/* Dropdown Menu */}
-            {isOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-[#FAF7ED] rounded-md shadow-lg py-1 z-10">
-                {sections.map((section) => (
-                  <button
-                    key={section.id}
-                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100 w-full text-left"
-                    onClick={() => {
-                      handleOptionClick();
-                      scrollToSection(section.id);
-                    }}
-                  >
-                    {section.name}
-                  </button>
-                ))}
-              </div>
-            )}
+            <div className={`absolute ${isOpen ? "" : "opacity-0 pointer-events-none"} transition-all duration-200 ease-in-out right-0 mt-2 w-48 bg-[#FAF7ED] rounded-md shadow-lg py-1 z-10`}>
+              {sections.map((section) => (
+                <button
+                  key={section.id}
+                  className="block px-4 py-2 text-gray-800 hover:bg-gray-100 w-full text-left"
+                  onClick={() => {
+                    handleOptionClick();
+                    scrollToSection(section.id);
+                  }}
+                >
+                  {section.name}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </nav>

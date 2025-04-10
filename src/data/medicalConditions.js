@@ -115,7 +115,7 @@ export const medicalConditions = [
     categoryName: 'Problems requiring intensive care',
     sections: [
       {
-        sectionName: 'Very Low Birth Weight Infants',
+        sectionName: 'Infants With Very Low Birth Weight',
         problems: veryLowBirthWeightProblems
       },
       {

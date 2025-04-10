@@ -46,94 +46,122 @@ const TreatmentCard = ({ condition, onSeeMore }) => {
   );
 };
 
-const PopoverSheet = ({ condition, onClose }) => {
+const PopoverSheet = ({ externalCondition, onClose }) => {
   const sheetRef = useRef(null);
 
+  const [condition, setInternalCondition] = useState(externalCondition);
+  const [isOpen, setIsOpen] = useState(externalCondition !== null);
+
+  // used for opening the sheet when the condition changes. Note that this sheet cannot be dismissed
+  // externally, so this will only be used for opening the sheet.
+  if (externalCondition !== condition && externalCondition !== null) {
+    setInternalCondition(externalCondition);
+    setIsOpen(true);
+  }
+
+  const closeSheet = () => {
+    setIsOpen(false);
+    onClose();
+
+    // wait 0.5s then set the condition to null
+    setTimeout(() => {
+      setInternalCondition(null);
+    }, 500);
+  };
+  
   // Handle background click
   const handleBackdropClick = (e) => {
     // Check if the click is outside the sheet
     if (sheetRef.current && !sheetRef.current.contains(e.target)) {
-      onClose();
+      closeSheet()
     }
   };
 
   return (
     <div 
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-end md:items-center justify-center z-50 text-left"
+      className={`fixed inset-0 transition-all duration-500 ease-in-out ${isOpen ? "bg-black bg-opacity-50" : "bg-opacity-0 pointer-events-none"} flex items-end md:items-center justify-center z-50 text-left`}
       onClick={handleBackdropClick}
     >
       <div 
         ref={sheetRef}
-        className="bg-[#FAF7ED] w-full md:w-3/5 lg:h-auto max-h-[90vh] overflow-auto rounded-t-lg md:rounded-lg shadow-xl flex flex-col"
+        className={`
+          bg-[#FAF7ED] w-full md:w-3/5 lg:h-auto max-h-[90vh] overflow-auto rounded-t-lg md:rounded-lg shadow-xl flex flex-col
+          transform transition-all duration-500 ease-in-out
+          ${isOpen ? 'translate-y-0' : 'translate-y-[110%]'}
+        `}
       >
-        {/* Fixed header */}
-        <div className="sticky top-0 bg-white p-4 border-b flex justify-between items-center z-10">
-          <h2>{condition.conditionName}</h2>
-          <button 
-            onClick={onClose}
-            className="p-1 rounded-full hover:bg-gray-200"
-            aria-label="Close"
-          >
-            <h2 alt="Close">✕</h2>
-          </button>
-        </div>
-        
-        {/* Scrollable content */}
-        <div className="p-6 overflow-auto space-y-4">
-          {/* Image Gallery - only shown if images exist */}
-          {(condition.imagePaths && condition.imagePaths.length > 0) && (
-            <div className="w-full overflow-x-auto pb-4">
-              <div className="flex gap-4 space-x-1 min-w-full">
-                {condition.imagePaths.map((image, index) => (
-                  <div key={index} className="flex-none">
-                    <img 
-                      src={image} 
-                      alt={`${condition.conditionName} - ${index + 1}`}
-                      className="h-64 w-auto object-cover rounded shadow-md"
-                    />
+        {condition && (
+          <div>
+            {/* Fixed header */}
+            <div className="sticky top-0 bg-white p-4 border-b flex justify-between items-center z-10">
+              <h2>{condition.conditionName}</h2>
+              <button 
+                onClick={closeSheet}
+                className="p-1 rounded-full hover:bg-gray-200"
+                aria-label="Close"
+              >
+                <h2 alt="Close">✕</h2>
+              </button>
+            </div>
+            
+            {/* Scrollable content */}
+            <div className="p-6 overflow-auto space-y-4">
+              {/* Image Gallery - only shown if images exist */}
+              {(condition.imagePaths && condition.imagePaths.length > 0) && (
+                <div className="w-full overflow-x-auto pb-4">
+                  <div className="flex gap-4 space-x-1 min-w-full">
+                    {condition.imagePaths.map((image, index) => (
+                      <div key={index} className="flex-none">
+                        <img 
+                          src={image} 
+                          alt={`${condition.conditionName} - ${index + 1}`}
+                          className="h-64 w-auto object-cover rounded shadow-md"
+                        />
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
+                </div>
+              )}
 
-          {condition.doctorsInvolvement && (
-            <div className="mb-4 space-y-2">
-              <h3>Dr Lee's Involvement</h3>
-              <p>{condition.doctorsInvolvement}</p>
+              {condition.doctorsInvolvement && (
+                <div className="mb-4 space-y-2">
+                  <h3>Dr Lee's Involvement</h3>
+                  <p>{condition.doctorsInvolvement}</p>
+                </div>
+              )}
+              {condition.signsAndSymptoms && (
+                <div className="mb-4 space-y-2">
+                  <h3>Signs and Symptoms</h3>
+                  <p>{condition.signsAndSymptoms}</p>
+                </div>
+              )}
+              {condition.causes && (
+                <div className="mb-4 space-y-2">
+                  <h3>Causes</h3>
+                  <p>{condition.causes}</p>
+                </div>
+              )}
+              {condition.about && (
+                <div className="mb-4 space-y-2">
+                  <h3>About the Condition</h3>
+                  <p>{condition.about}</p>
+                </div>
+              )}
+              {condition.diagnosisAndTreatment && (
+                <div className="mb-4 space-y-2">
+                  <h3>Diagnosis and Treatment</h3>
+                  <p>{condition.diagnosisAndTreatment}</p>
+                </div>
+              )}
+              {condition.notes && (
+                <div className="mb-4 space-y-2">
+                  <h3>Notes</h3>
+                  <p>{condition.notes}</p>
+                </div>
+              )}
             </div>
-          )}
-          {condition.signsAndSymptoms && (
-            <div className="mb-4 space-y-2">
-              <h3>Signs and Symptoms</h3>
-              <p>{condition.signsAndSymptoms}</p>
-            </div>
-          )}
-          {condition.causes && (
-            <div className="mb-4 space-y-2">
-              <h3>Causes</h3>
-              <p>{condition.causes}</p>
-            </div>
-          )}
-          {condition.about && (
-            <div className="mb-4 space-y-2">
-              <h3>About the Condition</h3>
-              <p>{condition.about}</p>
-            </div>
-          )}
-          {condition.diagnosisAndTreatment && (
-            <div className="mb-4 space-y-2">
-              <h3>Diagnosis and Treatment</h3>
-              <p>{condition.diagnosisAndTreatment}</p>
-            </div>
-          )}
-          {condition.notes && (
-            <div className="mb-4 space-y-2">
-              <h3>Notes</h3>
-              <p>{condition.notes}</p>
-            </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   )
@@ -230,12 +258,10 @@ const Treatments = () => {
       </div>
       </div>
     </div>
-    {selectedItem && (
-      <PopoverSheet 
-        condition={selectedItem} 
-        onClose={handleClose} 
-      />
-    )}
+    <PopoverSheet
+      externalCondition={selectedItem}
+      onClose={handleClose}
+    />
     </section>
   );
 }

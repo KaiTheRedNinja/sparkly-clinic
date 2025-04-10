@@ -67,7 +67,7 @@ const Header = () => {
           />
 
           {/* Desktop navigation */}
-          <ul className="hidden sm:block flex justify-around items-center space-x-12">
+          <ul className="hidden sm:flex justify-around items-center space-x-12">
             {sections.map((section) => (
               <li key={section.id}>
                 <button 

@@ -64,7 +64,7 @@ const PopoverSheet = ({ condition, onClose }) => {
     >
       <div 
         ref={sheetRef}
-        className="bg-[#FAF7ED] w-full md:w-3/5 sm-[90%] lg:h-auto max-h-[90vh] overflow-auto rounded-t-lg md:rounded-lg shadow-xl flex flex-col"
+        className="bg-[#FAF7ED] w-full md:w-3/5 lg:h-auto max-h-[90vh] overflow-auto rounded-t-lg md:rounded-lg shadow-xl flex flex-col"
       >
         {/* Fixed header */}
         <div className="sticky top-0 bg-white p-4 border-b flex justify-between items-center z-10">

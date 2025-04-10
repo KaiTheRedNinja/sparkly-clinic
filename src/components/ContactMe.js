@@ -80,22 +80,22 @@ const ContactOption = ({ icon, name, value, link }) => {
 
 const ContactOptions = () => {
   return (
-    <div>
-      <div className="hidden lg:flex flex-col space-y-4 mx-auto">
+    <div className="w-full">
+      <div className="hidden lg:flex flex-col space-y-4">
         <ContactOption name="💌 Email" value="hsc@mtalvernia.sg" link="mailto:hsc@mtalvernia.sg" />
         <ContactOption name="WhatsApp" icon="./assets/whatsapp.png" value="+65 9819 1303" link="https://wa.me/6598191303" />
         <ContactOption name="☎️ Phone" value="+65 6247 6215" link="tel:6562476215" />
         <ContactOption name="📠 Fax" value="+65 6250 6481" />
       </div>
 
-      <div className="lg:hidden flex-col space-y-4 mx-auto">
+      <div className="lg:hidden flex flex-col space-y-4">
         <div className="grid grid-cols-2 gap-4">
-          <ContactOption name="Email" value="hsc@mtalvernia.sg" link="mailto:hsc@mtalvernia.sg" />
-          <ContactOption name="Phone" value="123-456-7890" link="tel:1234567890" />
+          <ContactOption name="💌 Email" value="hsc@mtalvernia.sg" link="mailto:hsc@mtalvernia.sg" />
+          <ContactOption name="WhatsApp" icon="./assets/whatsapp.png" value="+65 9819 1303" link="https://wa.me/6598191303" />
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <ContactOption name="Email" value="hsc@mtalvernia.sg" link="mailto:hsc@mtalvernia.sg" />
-          <ContactOption name="Phone" value="123-456-7890" link="tel:1234567890" />
+          <ContactOption name="☎️ Phone" value="+65 6247 6215" link="tel:6562476215" />
+          <ContactOption name="📠 Fax" value="+65 6250 6481" />
         </div>
       </div>
     </div>

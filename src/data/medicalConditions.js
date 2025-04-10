@@ -1,6 +1,6 @@
 const wellBabyProblems = [
   {
-    id: 0,
+    id: "newbornJaundice",
     conditionName: "Newborn Jaundice",
     doctorsInvolvement: "Dr Lee will review your babies during their hospital stay in the well baby nurseries to advise you on their jaundice level. If they are deemed to be elevated, a non-invasive test with the Bilichek will be done and if elevated, a blood prick will be done to obtain some blood to test for the actual level of jaundice. If this level of jaundice is higher than the norm, phototherapy will be recommended for your baby. This will extend the stay for 24 hours at least.",
     signsAndSymptoms: "Jaundice in babies start from the face and progress down the body. The yellowness of the skin can also be seen in the white of the eye. As the jaundice increase, the baby may become more quiet, sleepy and not be interested in feeding.",
@@ -18,7 +18,7 @@ Sunbathing the babies will not help to reduce the jaundice and can even cause su
     ]
   },
   {
-    id: 1,
+    id: "congenitalHypothyroidism",
     conditionName: "Congenital Hypothyroidism",
     doctorsInvolvement: "Dr Lee will co-manage this condition with paediatric endocrinologist",
     signsAndSymptoms: "If undetected from screening, the child can present with constipation, low body temperature, slow mentation, and developmental delay.",
@@ -36,7 +36,7 @@ If the test results are abnormal, the baby will be started on thyroxine (a hormo
     notes: `With appropriate screening, early detection, and institution of appropriate therapy, babies are able to achieve normal intellect and development.`
   },
   {
-    id: 2,
+    id: "metabolicDisease",
     conditionName: "Metabolic disease",
     doctorsInvolvement: `For all newborns in the hospital, Dr Lee will recommend inborn errors of metabolism screening tests by blood spots collected from the babies prior to discharge.
 
@@ -48,7 +48,7 @@ If the screening tests results are abnormal, the babies may be asked to return f
 Dr Lee is happy to discuss more about these tests with you during your stay in the hospital.`
   },
   {
-    id: 3,
+    id: "hearingImpairment",
     conditionName: "Hearing Impairment",
     doctorsInvolvement: "For all newborns in the hospital, hearing tests are carried out before discharge. For some who did not pass at birth, a repeat test will be carried out at the outpatient. If the repeat test is also not passed, the babies are referred to the ENT specialist for hearing confirmation testing.",
     signsAndSymptoms: "Hearing loss may not be easily detected until delays in speech and language milestones are detected at 9 months to 1 year.",
@@ -61,7 +61,7 @@ Dr Lee is happy to discuss more about these tests with you during your stay in t
 
 const veryLowBirthWeightProblems = [
   {
-    id: 4,
+    id: "necrotisingEnterocolitis",
     conditionName: "Necrotising Enterocolitis",
     doctorsInvolvement: "Dr Lee, together with her NICU nurses and paediatric surgeons, can manage this condition.",
     signsAndSymptoms: "Premature babies with NEC can present with increased gastric residues, vomiting, abdomen distension, and also changes in vital parameters. Rarely, blood may be passed in the stools.",
@@ -80,7 +80,7 @@ In the book chapter she published, the risk of mortality is 35% for those with s
     ]
   },
   {
-    id: 5,
+    id: "eyeDiseaseOfPrematurity",
     conditionName: "Eye Disease of Prematurity",
     doctorsInvolvement: "Dr. Lee is able to diagnose and manage this condition in the NICU. Ophthalmologists (eye specialists) with pediatric expertise will be doing regular screening when required.",
     signsAndSymptoms: "Babies who have ROP may have squints, increased risk of myopia, and in severe cases, may have retinal detachment leading to blindness.",
@@ -92,7 +92,7 @@ If there is evidence of vision-threatening ROP, the babies will undergo laser th
     notes: "With timely intervention, none of the babies had blindness after treatment, as reported in her paper published in the Singapore Medical Journal."
   },
   {
-    id: 6,
+    id: "bleedingIntoVentricles",
     conditionName: `Bleeding into the Ventricles of the Brain`,
     doctorsInvolvement: `Dr. Lee is able to diagnose and manage this condition in the NICU. A radiologist with pediatric ultrasound expertise may be asked to do further imaging when required.`,
     signsAndSymptoms: `Babies who have mild bleeds may be asymptomatic, and this can only be diagnosed on routine screening brain scans. For those who have severe bleeds, the babies may have changes in their breathing pattern, blood pressure changes, and also changes in their sensorium.`,
@@ -110,7 +110,7 @@ In severe cases, the blood in the ventricles may obstruct the flow of cerebrospi
     ]
   },
   {
-    id: 7,
+    id: "patentDuctusArteriosus",
     conditionName: "Patent Ductus Arteriosus (PDA)",
     doctorsInvolvement: "[[PLACEHOLDER UNTIL PROPER TEXT GIVEN]]",
     signsAndSymptoms: `In premature babies, PDA can cause breathing difficulties that may necessitate increased respiratory support. A murmur may be heard on examination of the heart. In very premature and small babies, a large PDA may occasionally result in bleeding into the lungs (pulmonary hemorrhage), which can be life-threatening.`,
@@ -133,7 +133,7 @@ In her experience, 60% of VLBW babies with symptomatic PDA were successfully tre
 
 const intensiveCareProblems = [
   {
-    id: 8,
+    id: "brainInjuredNeonates",
     conditionName: "Brain Injured Neonates",
     doctorsInvolvement: `Dr Lee is capable of handling this condition in the neonatal intensive care unit with the team of nurses.
 
@@ -155,7 +155,7 @@ Special imaging with MRI will allow us to delineate the extent of the brain inju
     ]
   },
   {
-    id: 9,
+    id: "twinsAndMultiplePregnancies",
     conditionName: "Twins and multiple pregnancies",
     doctorsInvolvement: "Dr Lee is able to manage this condition and recommends that an additional paediatrician is available with the care for your precious children during the birth process to provide assistance and care for the babies when they are born.",
     signsAndSymptoms: `The babies may be premature and require supportive care. They may be term (more than 37 weeks of pregnancy) but may be low birth weight of less than 2.5kg. They may require monitoring for blood sugar and jaundice.  
@@ -165,7 +165,7 @@ They may also be mildly premature (more than 34 weeks but less than 37 weeks). T
     notes: "Based on her paper, 65% will require admission to NICU and require from 2 weeks to 4 weeks of stay. Those with additional risk of congenital malformations have the potential risk of death. Dr Lee is capable of providing an alternative care plan for the family."
   },
   {
-    id: 10,
+    id: "congenitalCardiacCondition",
     conditionName: "Congenital Cardiac Condition",
     doctorsInvolvement: "Dr. Lee is able to provide resuscitation for all babies who are diagnosed with congenital cardiac condition. She can provide initial stabilization and treatment in the NICU. She will work with our paediatric cardiologist (heart specialists) and also cardiothoracic surgeons to correct the underlying heart condition. But she is also able to provide an alternative care plan for these patients should the condition be too severe.",
     signsAndSymptoms: "The babies may be sick at birth with inadequate oxygen, bluish around the lips, or poor heart function. Otherwise, they may be well and only diagnosed during the daily physical checkup with an extra sound heard, called a murmur.",
@@ -177,7 +177,7 @@ They may also be mildly premature (more than 34 weeks but less than 37 weeks). T
     ]
   },
   {
-    id: 11,
+    id: "chromosomalDisorders",
     conditionName: "Chromosomal Disorders",
     doctorsInvolvement: "Dr Lee is capable of handling this condition in the neonatal intensive care unit with the team of nurses. As further specialized organ specialists are also available, she will coordinate the care of the various subspecialities.",
     signsAndSymptoms: "The babies with chromosomal conditions may not be able to adapt to ex-utero life and need resuscitation at birth. They may also have other major organ malfunctions which need intensive care support. They may also be drowsy and some can also have seizures (fits).",
@@ -187,7 +187,7 @@ They may also be mildly premature (more than 34 weeks but less than 37 weeks). T
     notes: "For those with potentially life-limiting chromosomal conditions, Dr Lee is available to provide an alternative care plan where the family can spend valuable and meaningful time together."
   },
   {
-    id: 12,
+    id: "congenitalInfections",
     conditionName: "Congenital Infections",
     doctorsInvolvement: "Dr Lee is capable of handling this condition with the team of nurses. As further specialized organ specialists, together with the paediatric infectious disease specialists are also available, she will coordinate the care of the various subspecialities.",
     signsAndSymptoms: "The babies with congenital conditions may not be able to adapt to ex-utero life and need resuscitation at birth. They may also have other major organ malfunctions which need intensive care support. They may also be drowsy and some can also have seizures (fits). Others may appear completely well at birth.",
@@ -197,7 +197,7 @@ They may also be mildly premature (more than 34 weeks but less than 37 weeks). T
     notes: "For those with potentially life-limiting congenital infectious conditions, Dr Lee is available to provide an alternative care plan where the family can spend valuable and meaningful time together."
   },
   {
-    id: 13,
+    id: "respiratoryDisease",
     conditionName: "Respiratory Disease Requiring Mechanical Ventilation",
     doctorsInvolvement: "Dr. Lee and her NICU nurses are capable of managing all babies who require ventilation support.",
     signsAndSymptoms: "Babies may be breathing fast, with indrawing of the chest. They may also be bluish around the lips if this persists.",

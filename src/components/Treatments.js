@@ -82,7 +82,7 @@ const PopoverSheet = ({ condition, onClose }) => {
         <div className="p-6 overflow-auto space-y-4">
           {/* Image Gallery - only shown if images exist */}
           {(condition.imagePaths && condition.imagePaths.length > 0) && (
-            <div className="w-full overflow-x-auto py-4">
+            <div className="w-full overflow-x-auto pb-4">
               <div className="flex gap-4 space-x-1 min-w-full">
                 {condition.imagePaths.map((image, index) => (
                   <div key={index} className="flex-none">

@@ -138,7 +138,7 @@ ${appointmentType !== "" ? ("I would like to schedule a " + appointmentType.toLo
   }
 
   return (
-    <div className="space-y-4 mx-auto">
+    <div className="space-y-4">
       <div className="grid grid-cols-2 gap-4">
         <TextField 
           placeholder="Your Name"
@@ -229,7 +229,7 @@ const ContactMe = () => {
       <div className="p-4 lg:max-w-[70%] mx-auto text-left">
         <h1 className="mb-5">Contact Me</h1>
 
-        <div class="flex flex-col lg:flex-row items-center">
+        <div class="flex flex-col lg:flex-row items-center justify-between">
           <ContactOptions />
           
           <div class="flex items-center lg:items-stretch my-4 lg:my-0 lg:mx-8 w-full lg:w-auto">

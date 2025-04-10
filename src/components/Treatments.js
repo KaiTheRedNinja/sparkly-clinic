@@ -59,7 +59,7 @@ const PopoverSheet = ({ condition, onClose }) => {
 
   return (
     <div 
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-end md:items-center justify-center z-50"
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-end md:items-center justify-center z-50 text-left"
       onClick={handleBackdropClick}
     >
       <div 
@@ -68,7 +68,7 @@ const PopoverSheet = ({ condition, onClose }) => {
       >
         {/* Fixed header */}
         <div className="sticky top-0 bg-white p-4 border-b flex justify-between items-center z-10">
-          <h2 className="text-xl font-bold">{condition.conditionName}</h2>
+          <h2>{condition.conditionName}</h2>
           <button 
             onClick={onClose}
             className="p-1 rounded-full hover:bg-gray-200"
@@ -77,10 +77,62 @@ const PopoverSheet = ({ condition, onClose }) => {
             <p>X</p>
           </button>
         </div>
+
+        {/* Image Gallery - only shown if images exist */}
+        {(condition.imagePaths && condition.imagePaths.length > 0) && (
+          <div className="w-full overflow-x-auto py-4 px-6">
+            <div className="flex gap-4 space-x-1 min-w-full">
+              {condition.imagePaths.map((image, index) => (
+                <div key={index} className="flex-none">
+                  <img 
+                    src={image} 
+                    alt={`${condition.conditionName} - Image ${index + 1}`}
+                    className="h-64 w-auto object-cover rounded shadow-md"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
         
         {/* Scrollable content */}
-        <div className="p-6 overflow-auto">
-          <p>{condition.doctorsInvolvement}</p>
+        <div className="p-6 overflow-auto space-y-4">
+          {condition.doctorsInvolvement && (
+            <div className="mb-4 space-y-2">
+              <h3>Dr Lee's Involvement</h3>
+              <p>{condition.doctorsInvolvement}</p>
+            </div>
+          )}
+          {condition.signsAndSymptoms && (
+            <div className="mb-4 space-y-2">
+              <h3>Signs and Symptoms</h3>
+              <p>{condition.signsAndSymptoms}</p>
+            </div>
+          )}
+          {condition.causes && (
+            <div className="mb-4 space-y-2">
+              <h3>Causes</h3>
+              <p>{condition.causes}</p>
+            </div>
+          )}
+          {condition.about && (
+            <div className="mb-4 space-y-2">
+              <h3>About the Condition</h3>
+              <p>{condition.about}</p>
+            </div>
+          )}
+          {condition.diagnosisAndTreatment && (
+            <div className="mb-4 space-y-2">
+              <h3>Diagnosis and Treatment</h3>
+              <p>{condition.diagnosisAndTreatment}</p>
+            </div>
+          )}
+          {condition.notes && (
+            <div className="mb-4 space-y-2">
+              <h3>Notes</h3>
+              <p>{condition.notes}</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@ const Footer = () => {
         {/* Email with letter emoji */}
         <div className="flex items-center mb-3" onClick={() => window.open('mailto:hsc@mtalvernia.sg', '_blank')}>
           <div className="w-8 text-center select-none cursor-pointer">💌</div>
-          <div className="ml-4">
+          <div className="ml-4 text-blue-500">
             <p>hsc@mtalvernia.sg</p>
           </div>
         </div>
@@ -35,7 +35,7 @@ const Footer = () => {
             alt="WhatsApp"
             className="w-6 h-6 ml-1 cursor-pointer" // Adjusted size for better alignment
           />
-          <div className="ml-4">
+          <div className="ml-4 text-blue-500">
             <p>+65 9819 1303</p>
           </div>
         </div>
@@ -43,7 +43,7 @@ const Footer = () => {
         {/* Phone number with phone icon */}
         <div className="flex items-center mb-3" onClick={() => window.open('tel:+6562476215', '_blank')}>
         <div className="w-8 text-center select-none cursor-pointer">☎️</div>
-          <div className="ml-4">
+          <div className="ml-4 text-blue-500">
             <p>+65 6247 6215</p>
           </div>
         </div>

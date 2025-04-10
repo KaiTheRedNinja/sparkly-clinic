@@ -44,8 +44,8 @@ const Reviews = () => {
     <section id="reviews" className="w-full bg-[#DAEBD6] py-8 px-4 md:py-16 md:px-8">
     <div className="p-4 lg:max-w-[70%] mx-auto">
       <div className="relative">
-        <h1 className="mb-2 text-left md:text-left">
-            Reviews
+        <h1 className="mb-5 text-left">
+          Reviews
         </h1>
         {isMobileView ? (
           <div className="overflow-x-auto mx-[-32px]">

@@ -58,7 +58,51 @@ const DatePicker = ({ placeholder, value, onChange }) => {
   );
 }
 
-const ContactMe = () => {
+const ContactOption = ({ icon, name, value, link }) => {
+  return (
+    <div className="w-full p-3 bg-white border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+      <div className="flex items-center">
+        {icon && (
+          <img src={icon} alt={name} className="w-6 h-6 mr-2" />
+        )}
+        <h3>{name}</h3>
+      </div>
+      {link ? (
+        <a href={link} className="text-blue-500 hover:underline">
+          {value}
+        </a>
+      ) : (
+        <p>{value}</p>
+      )}
+    </div>
+  );
+}
+
+const ContactOptions = () => {
+  return (
+    <div>
+      <div className="hidden lg:flex flex-col space-y-4 mx-auto">
+        <ContactOption name="💌 Email" value="hsc@mtalvernia.sg" link="mailto:hsc@mtalvernia.sg" />
+        <ContactOption name="WhatsApp" icon="./assets/whatsapp.png" value="+65 9819 1303" link="https://wa.me/6598191303" />
+        <ContactOption name="☎️ Phone" value="+65 6247 6215" link="tel:6562476215" />
+        <ContactOption name="📠 Fax" value="+65 6250 6481" />
+      </div>
+
+      <div className="lg:hidden flex-col space-y-4 mx-auto">
+        <div className="grid grid-cols-2 gap-4">
+          <ContactOption name="Email" value="hsc@mtalvernia.sg" link="mailto:hsc@mtalvernia.sg" />
+          <ContactOption name="Phone" value="123-456-7890" link="tel:1234567890" />
+        </div>
+        <div className="grid grid-cols-2 gap-4">
+          <ContactOption name="Email" value="hsc@mtalvernia.sg" link="mailto:hsc@mtalvernia.sg" />
+          <ContactOption name="Phone" value="123-456-7890" link="tel:1234567890" />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const EmailBuilder = () => {
   const [name, setName] = useState("");
   const [relation, setRelation] = useState("");
   const [patientId, setPatientId] = useState("");
@@ -94,89 +138,115 @@ ${appointmentType !== "" ? ("I would like to schedule a " + appointmentType.toLo
   }
 
   return (
+    <div className="space-y-4 mx-auto">
+      <div className="grid grid-cols-2 gap-4">
+        <TextField 
+          placeholder="Your Name"
+          value={name} 
+          onChange={setName} 
+        />
+        <Dropdown 
+          placeholder="Relation to Patient"
+          value={relation} 
+          onChange={setRelation}
+          options={relationOptions}
+        />
+      </div>
+      
+      <div className="grid grid-cols-2 gap-4">
+        <TextField 
+          placeholder="Patient ID (if any)" 
+          value={patientId} 
+          onChange={setPatientId} 
+        />
+        <TextField 
+          placeholder="Phone Number" 
+          value={phone} 
+          onChange={setPhone} 
+        />
+      </div>
+      
+      <div className={`grid grid-cols-${showOtherCondition ? 2 : 1} gap-4`}>
+        <Dropdown 
+          placeholder="Condition"
+          value={condition==='' ? '' : (conditionOptions.includes(condition) ? condition : "Other")} 
+          onChange={setCondition} 
+          options={conditionOptions.concat(["Other"])}
+        />
+        {showOtherCondition && (
+          <TextField 
+            placeholder="Condition (if other)" 
+            value={condition === "Other" ? "" : condition} 
+            onChange={setCondition} 
+          />
+        )}
+      </div>
+
+      <div>
+        <Dropdown
+          placeholder="Type of Appointment"
+          value={appointmentType}
+          onChange={setAppointmentType}
+          options={appointmentOptions}
+        />
+      </div>
+
+      <div>
+        <DatePicker 
+          placeholder="Preferred Date and Time"
+          value={date}
+          onChange={setDate}
+        />
+      </div>
+
+      <div className="w-full flex justify-center gap-4 text-center">
+        <div className="w-fit relative p-2 bg-white border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+          <a href={emailLink()}>
+            <h3 className="">
+              Open in your Email Service
+            </h3>
+          </a>
+        </div>
+
+        <div className="w-fit relative p-2 bg-white border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+          <button onClick={() => {
+            navigator.clipboard.writeText(emailMessage());
+            alert("Email body copied to clipboard!");
+          }}>
+            <h3 className="">
+              Copy Email Body to Clipboard
+            </h3>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const ContactMe = () => {
+  return (
     <section id="contactme" className="w-full bg-[#FAF7ED] py-8 px-4 md:py-16 md:px-8">
-      <div className="p-4 lg:max-w-[50%] mx-auto">
-        <div className="p-4 space-y-4 mx-auto">
-          <div className="grid grid-cols-2 gap-4">
-            <TextField 
-              placeholder="Your Name"
-              value={name} 
-              onChange={setName} 
-            />
-            <Dropdown 
-              placeholder="Relation to Patient"
-              value={relation} 
-              onChange={setRelation}
-              options={relationOptions}
-            />
-          </div>
+      <div className="p-4 lg:max-w-[70%] mx-auto text-left">
+        <h1>Contact Me</h1>
+
+        <div class="flex flex-col lg:flex-row items-center">
+          <ContactOptions />
           
-          <div className="grid grid-cols-2 gap-4">
-            <TextField 
-              placeholder="Patient ID (if any)" 
-              value={patientId} 
-              onChange={setPatientId} 
-            />
-            <TextField 
-              placeholder="Phone Number" 
-              value={phone} 
-              onChange={setPhone} 
-            />
-          </div>
-          
-          <div className={`grid grid-cols-${showOtherCondition ? 2 : 1} gap-4`}>
-            <Dropdown 
-              placeholder="Condition"
-              value={condition==='' ? '' : (conditionOptions.includes(condition) ? condition : "Other")} 
-              onChange={setCondition} 
-              options={conditionOptions.concat(["Other"])}
-            />
-            {showOtherCondition && (
-              <TextField 
-                placeholder="Condition (if other)" 
-                value={condition === "Other" ? "" : condition} 
-                onChange={setCondition} 
-              />
-            )}
-          </div>
-
-          <div>
-            <Dropdown
-              placeholder="Type of Appointment"
-              value={appointmentType}
-              onChange={setAppointmentType}
-              options={appointmentOptions}
-            />
-          </div>
-
-          <div>
-            <DatePicker 
-              placeholder="Preferred Date and Time"
-              value={date}
-              onChange={setDate}
-            />
-          </div>
-
-          <div className="w-full flex justify-center gap-4">
-            <div className="w-fit relative p-2 bg-white border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300">
-              <a href={emailLink()}>
-                <h3 className="">
-                  Open in your Email Service
-                </h3>
-              </a>
+          <div class="flex items-center lg:items-stretch my-4 lg:my-0 lg:mx-8 w-full lg:w-auto">
+            {/* This is the horizontal "or" on smaller screens, which has lines to the left and right */}
+            <div class="flex items-center w-full lg:hidden">
+              <div class="flex-grow h-px bg-gray-300"></div>
+              <span class="px-4 font-bold text-gray-500">OR</span>
+              <div class="flex-grow h-px bg-gray-300"></div>
             </div>
-
-            <div className="w-fit relative p-2 bg-white border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300">
-              <button onClick={() => {
-                navigator.clipboard.writeText(emailMessage());
-                alert("Email body copied to clipboard!");
-              }}>
-                <h3 className="">
-                  Copy Email Body to Clipboard
-                </h3>
-              </button>
+            
+            {/* This is the vertical "or" on larger screens, which doesn't have the lines */}
+            <div class="hidden lg:flex flex-col justify-center h-full">
+              <span class="py-4 font-bold text-gray-500">OR</span>
             </div>
           </div>
+          
+          <EmailBuilder />
         </div>
       </div>
     </section>

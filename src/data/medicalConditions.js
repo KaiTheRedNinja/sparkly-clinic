@@ -207,6 +207,16 @@ They may also be mildly premature (more than 34 weeks but less than 37 weeks). T
     imagePaths: [
       "./assets/pictures/resp_disease.JPG"
     ]
+  },
+  {
+    id: "lifeLimitingConditions",
+    conditionName: "Neonates and paediatric with life limiting conditions",
+    doctorsInvolvement: "Dr Lee is capable of handling this condition in the neonatal intensive care unit/paediatric intensive care and also paediatrics general ward with the team of nurses. As further specialized organ specialists are also available, she will coordinate the care of the various subspecialities.",
+    signsAndSymptoms: "The special child may not be able to adapt to ex-utero life and need resuscitation at birth. They may also have other major organ malfunctions which need intensive care support. They may also be drowsy and some can also have seizures (fits). Many children may have a long period where they had been fighting bravely all their life.",
+    causes: "Every special child has a special condition leading them to this stage of life",
+    about: "Despite having a life limiting condition, we can help to make their days memorable and help to elevate their symptoms and finding meaning for them, their family and siblings.",
+    diagnosisAndTreatment: "The children will be co-managed with their primary specialist to provide care for their condition. Whilst hope is always there, we can have advanced care planning to help make their days meaningful. Besides supportive care for breathing, nutrition, cardiac, kidney, hearing, endocrine, neurological and also orthopaedic and surgical treatment may be needed",
+    notes: "For those with potentially life limiting chromosomal conditions, Dr Lee is available to provide alternative care plan where the family can spend valuable and meaningful time together."
   }
 ]
 

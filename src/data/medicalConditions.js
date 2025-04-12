@@ -112,7 +112,7 @@ In severe cases, the blood in the ventricles may obstruct the flow of cerebrospi
   {
     id: "patentDuctusArteriosus",
     conditionName: "Patent Ductus Arteriosus (PDA)",
-    doctorsInvolvement: "[[PLACEHOLDER UNTIL PROPER TEXT GIVEN]]",
+    doctorsInvolvement: "Dr Lee and her team of NICU nurses are able to manage this condition, She will also refer to the paediatric cardiologist (heart specialist) and also cardio-thoracic surgeon (heart surgeons) if the condition cannot be treated medically.",
     signsAndSymptoms: `In premature babies, PDA can cause breathing difficulties that may necessitate increased respiratory support. A murmur may be heard on examination of the heart. In very premature and small babies, a large PDA may occasionally result in bleeding into the lungs (pulmonary hemorrhage), which can be life-threatening.`,
     causes: `Patent Ductus Arteriosus (PDA) is a blood vessel that is present in all babies when they are in the womb. This blood vessel connects the aorta (a large artery that supplies blood from the heart to various body parts) and pulmonary artery (a large artery that supplies blood to the lungs). When the baby is in the womb, PDA normally diverts blood from the pulmonary artery to the aorta as the lungs do not take part in gas exchange.
 

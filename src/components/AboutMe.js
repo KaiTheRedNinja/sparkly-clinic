@@ -25,7 +25,7 @@ const AboutMe = () => {
         </div>
         
         {/* About Text - Wraps around on desktop */}
-        <div className="text-gray-700 space-y-4 text-left">
+        <div className="text-gray-700 space-y-4 text-justify">
           <p className="leading-relaxed">
             Dr Lee Le Ye graduated from the National University of Singapore and obtained her speciality
             qualifications in paediatrics and sub-specialised in neonatology. She undertook the graduate diploma

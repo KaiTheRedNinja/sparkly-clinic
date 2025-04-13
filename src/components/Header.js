@@ -46,7 +46,7 @@ const Header = () => {
       id: 'stories',
     },
     {
-      name: 'Conditions Treated',
+      name: 'Conditions I Treat',
       id: 'treatments',
     },
     {

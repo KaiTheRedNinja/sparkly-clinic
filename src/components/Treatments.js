@@ -212,7 +212,7 @@ const Treatments = () => {
     <div className="p-4 lg:max-w-[70%] mx-auto">
       <div className="relative">
       <h1 className="mb-5 text-left md:text-left">
-        Conditions Treated
+        Conditions Dr Lee Treats
       </h1>
       {/* Add content for treatments here */}
 

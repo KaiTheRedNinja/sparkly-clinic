@@ -86,7 +86,7 @@ const PopoverSheet = ({ externalCondition, onClose }) => {
         className={`
           bg-[#FAF7ED] w-full md:w-3/5 lg:h-auto max-h-[90vh] overflow-auto rounded-t-lg md:rounded-lg shadow-xl flex flex-col
           transform transition-all duration-500 ease-in-out
-          ${isOpen ? 'translate-y-0' : 'translate-y-[110%]'}
+          ${isOpen ? 'translate-y-0' : 'translate-y-[130%]'}
         `}
       >
         {condition && (

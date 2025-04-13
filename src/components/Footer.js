@@ -11,13 +11,20 @@ const Footer = () => {
         </div>
 
         {/* Address with pin emoji and gray square */}
-        <div className="flex items-start mb-3">
+        <div className="flex items-start w-full mb-3 space-x-4">
           <div className="w-8 text-center pt-1 select-none cursor-default">📍</div>
-          <a href="https://maps.app.goo.gl/omKfaqHqrSPN3oFR8" target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline flex-1">
+          <a href="https://maps.app.goo.gl/omKfaqHqrSPN3oFR8" target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
             <p>Level 2, Health Screening Centre</p>
             <p>St. Anne Mother and Child Centre</p>
             <p>820 Thomson Road S574623</p>
           </a>
+          <div>
+            <img
+              src="./assets/mountAlogo.png"
+              alt="Mount Alvernia Hospital Logo"
+              className="w-16 h-16 rounded-lg ml-4 cursor-pointer"
+            />
+          </div>
         </div>
 
         {/* Email with letter emoji */}

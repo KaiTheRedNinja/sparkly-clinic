@@ -46,18 +46,6 @@ body, p {
   font-size: 18px;
 }
 
-/* Caption styling - typically used with figcaption element */
-figcaption {
-  font-weight: normal;
-  font-size: 15px;
-}
-
-/* Alternative caption styling for when you use a div or p with a class */
-.caption {
-  font-weight: normal;
-  font-size: 15px;
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -65,11 +53,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 body {
@@ -80,4 +63,14 @@ body {
 
 html {
   height: -webkit-fill-available;
+}
+
+/* Box styles */
+
+.roundedBox {
+  @apply rounded-xl shadow-lg;
+}
+
+.roundedHoverBox {
+  @apply rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300;
 }

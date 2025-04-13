@@ -8,7 +8,7 @@ const TextField = ({ placeholder, value, onChange }) => {
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full p-2 bg-white border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300"
+        className="w-full p-2 bg-white border roundedBox focus:outline-none focus:ring-2 focus:ring-blue-300"
       />
       {value === "" && (
         <div className="absolute top-0 left-0 p-2 pointer-events-none text-gray-400">
@@ -25,7 +25,7 @@ const Dropdown = ({ placeholder, value, onChange, options }) => {
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className={"w-full p-2 bg-white border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300 appearance-none" + (value==="" ? " text-gray-400" : "")}
+        className={"w-full p-2 bg-white border roundedBox focus:outline-none focus:ring-2 focus:ring-blue-300 appearance-none" + (value==="" ? " text-gray-400" : "")}
       >
         <option value="">{placeholder}</option>
         {options.map((option) => (
@@ -45,7 +45,7 @@ const Dropdown = ({ placeholder, value, onChange, options }) => {
 
 const DatePicker = ({ placeholder, value, onChange }) => {
   return (
-    <div className="w-full p-2 bg-white border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300 flex items-center justify-between">
+    <div className="w-full p-2 bg-white border roundedBox focus:outline-none focus:ring-2 focus:ring-blue-300 flex items-center justify-between">
       <p className={value==="" ? "text-gray-400" : ""}>{placeholder}</p>
       <input 
         aria-label="Date and time" 
@@ -60,7 +60,7 @@ const DatePicker = ({ placeholder, value, onChange }) => {
 
 const ContactOption = ({ icon, name, value, link }) => {
   return (
-    <div className="w-full p-3 bg-white border rounded-xl shadow-md">
+    <div className="w-full p-3 bg-white border roundedHoverBox">
       <div className="flex items-center">
         {icon && (
           <img src={icon} alt={name} className="w-6 h-6 mr-2" />
@@ -200,7 +200,7 @@ ${appointmentType !== "" ? ("I would like to schedule a " + appointmentType.toLo
       </div>
 
       <div className="w-full flex justify-center gap-4 text-center">
-        <div className="w-fit relative p-2 bg-white border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+        <div className="w-fit relative p-2 bg-white border roundedHoverBox focus:outline-none focus:ring-2 focus:ring-blue-300">
           <a href={emailLink()} target="_blank" rel="noopener noreferrer">
             <h3 className="">
               Open in your Email Service
@@ -208,7 +208,7 @@ ${appointmentType !== "" ? ("I would like to schedule a " + appointmentType.toLo
           </a>
         </div>
 
-        <div className="w-fit relative p-2 bg-white border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+        <div className="w-fit relative p-2 bg-white border roundedHoverBox focus:outline-none focus:ring-2 focus:ring-blue-300">
           <button onClick={() => {
             navigator.clipboard.writeText(emailMessage());
             alert("Email body copied to clipboard!");

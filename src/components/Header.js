@@ -38,20 +38,24 @@ const Header = () => {
 
   const sections = [
     {
-        name: 'About Dr Lee',
-        id: 'aboutme',
+      name: 'About Dr Lee',
+      id: 'aboutme',
     },
     {
-        name: 'Conditions Treated',
-        id: 'treatments',
+      name: 'Our Story',
+      id: 'stories',
     },
     {
-        name: 'Reviews',
-        id: 'reviews',
+      name: 'Conditions Treated',
+      id: 'treatments',
     },
     {
-        name: 'Contact',
-        id: 'contactme',
+      name: 'Reviews',
+      id: 'reviews',
+    },
+    {
+      name: 'Contact',
+      id: 'contactme',
     }
   ]
 

@@ -8,7 +8,7 @@ const AboutMe = () => {
         <img 
           src="./assets/profile.jpeg"
           alt="Lee Ye Le's Profile" 
-          className="rounded-2xl shadow-lg md:float-left mr-8 mb-4 w-full sm:max-w-xs md:max-w-xs"
+          className="roundedBox md:float-left mr-8 mb-4 w-full sm:max-w-xs md:max-w-xs"
         />
         {/* Name - Top right on desktop */}
         <h1 className="mb-2 text-left md:text-left">
@@ -55,28 +55,20 @@ const AboutMe = () => {
         </div>
 
         <div className="flex mt-4 space-x-4">
-          <img
-            src="./assets/linkedIn.png"
-            alt="LinkedIn"
-            className="w-12 h-12 rounded-xl shadow-lg cursor-pointer"
-            onClick={() => window.open('https://linkedin.com/in/le-ye-lee-929992113', '_blank')}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                window.open('https://linkedin.com/in/le-ye-lee-929992113', '_blank');
-              }
-            }}
-          />
-          <img 
-            src="./assets/researchGate.jpeg"
-            alt="Research Gate"
-            className="w-12 h-12 rounded-xl shadow-lg cursor-pointer"
-            onClick={() => window.open('https://www.researchgate.net/profile/Le-Lee', '_blank')}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                window.open('https://www.researchgate.net/profile/Le-Lee', '_blank');
-              }
-            }}
-          />
+          <a href="https://linkedin.com/in/le-ye-lee-929992113" target="_blank" rel="noopener noreferrer" class="roundedHoverBox w-12 h-12 cursor-pointer">
+            <img
+              src="./assets/linkedIn.png"
+              alt="LinkedIn"
+              className="rounded-xl"
+            />
+          </a>
+          <a href="https://www.researchgate.net/profile/Le-Lee" target="_blank" rel="noopener noreferrer" class="roundedHoverBox w-12 h-12 cursor-pointer">
+            <img 
+              src="./assets/researchGate.jpeg"
+              alt="Research Gate"
+              className="rounded-xl"
+            />
+          </a>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ import { medicalConditions, medicalConditionsFlat } from "../data/medicalConditi
 
 const TreatmentCard = ({ condition, onSeeMore }) => {
   return (
-    <div className="max-h-[350px] w-full rounded-xl shadow-md bg-[#FAF7ED] overflow-hidden relative">
+    <div className="roundedHoverBox max-h-[350px] w-full bg-[#FAF7ED] overflow-hidden relative" onClick={() => onSeeMore(condition.id)}>
       {(condition.imagePaths && condition.imagePaths.length > 0) && (
         <div className="w-full bg-white">
           <img 
@@ -38,8 +38,7 @@ const TreatmentCard = ({ condition, onSeeMore }) => {
       {/* see more text */}
       <div className="absolute bottom-0 w-full">
         <p
-          className="text-gray-500 underline cursor-pointer p-4 z-40" 
-          onClick={() => onSeeMore(condition.id)}
+          className="text-gray-500 underline cursor-pointer p-4 z-40"
         >See more</p>
       </div>
     </div>

@@ -25,7 +25,7 @@ const ExternalLinkCard = ({ title, url }) => {
       href={url} 
       target="_blank"
       rel="noopener noreferrer"
-      className="rounded-xl shadow-lg bg-[#DAEBD6] py-3 px-5 flex items-center cursor-pointer duration-300 w-fit"
+      className="roundedHoverBox bg-[#DAEBD6] py-3 px-5 flex items-center cursor-pointer w-fit"
     >
       <h3>{title}</h3>
       <img src="./assets/openExternal.svg" alt="Open External Link" className="ml-2 text-gray-600" />

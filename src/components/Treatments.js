@@ -6,7 +6,7 @@ import { medicalConditions, medicalConditionsFlat } from "../data/medicalConditi
 
 const TreatmentCard = ({ condition, onSeeMore }) => {
   return (
-    <div className="max-h-[350px] w-full rounded-xl shadow-md bg-[#DAEBD6] overflow-hidden relative">
+    <div className="max-h-[350px] w-full rounded-xl shadow-md bg-[#FAF7ED] overflow-hidden relative">
       {(condition.imagePaths && condition.imagePaths.length > 0) && (
         <div className="w-full bg-white">
           <img 
@@ -27,10 +27,10 @@ const TreatmentCard = ({ condition, onSeeMore }) => {
 
       {/* trail off shadow */}
       <div className="absolute bottom-0 w-full">
-        <div className="absolute bottom-10 left-0 right-0 h-16 bg-gradient-to-t from-[#DAEBD6] to-transparent flex">
+        <div className="absolute bottom-10 left-0 right-0 h-16 bg-gradient-to-t from-[#FAF7ED] to-transparent flex">
           <span className="text-gray-500"></span>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-10 bg-[#DAEBD6] flex">
+        <div className="absolute bottom-0 left-0 right-0 h-10 bg-[#FAF7ED] flex">
           <span className="text-gray-500"></span>
         </div>
       </div>
@@ -209,7 +209,7 @@ const Treatments = () => {
   };
 
   return (
-    <section id="treatments" className="w-full bg-[#FAF7ED] py-8 px-4 md:py-16 md:px-8">
+    <section id="treatments" className="w-full bg-[#DAEBD6] py-8 px-4 md:py-16 md:px-8">
     <div className="p-4 lg:max-w-[70%] mx-auto">
       <div className="relative">
       <h1 className="mb-5 text-left md:text-left">

@@ -60,7 +60,7 @@ const DatePicker = ({ placeholder, value, onChange }) => {
 
 const ContactOption = ({ icon, name, value, link }) => {
   return (
-    <div className="w-full p-3 bg-white border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300">
+    <div className="w-full p-3 bg-white border rounded-xl shadow-md">
       <div className="flex items-center">
         {icon && (
           <img src={icon} alt={name} className="w-6 h-6 mr-2" />
@@ -80,7 +80,7 @@ const ContactOption = ({ icon, name, value, link }) => {
 
 const ContactOptions = () => {
   return (
-    <div className="w-full">
+    <div className="w-full lg:w-1/2">
       <div className="hidden lg:flex flex-col space-y-4">
         <ContactOption name="💌 Email" value="hsc@mtalvernia.sg" link="mailto:hsc@mtalvernia.sg" />
         <ContactOption name="WhatsApp" icon="./assets/whatsapp.png" value="+65 9819 1303" link="https://wa.me/6598191303" />
@@ -225,7 +225,7 @@ ${appointmentType !== "" ? ("I would like to schedule a " + appointmentType.toLo
 
 const ContactMe = () => {
   return (
-    <section id="contactme" className="w-full bg-[#FAF7ED] py-8 px-4 md:py-16 md:px-8">
+    <section id="contactme" className="w-full bg-[#DAEBD6] py-8 px-4 md:py-16 md:px-8">
       <div className="p-4 lg:max-w-[70%] mx-auto text-left">
         <h1 className="mb-5">Contact Me</h1>
 

@@ -11,41 +11,41 @@ const Footer = () => {
         </div>
 
         {/* Address with pin emoji and gray square */}
-        <div className="flex items-start mb-3" onClick={() => window.open('https://maps.app.goo.gl/omKfaqHqrSPN3oFR8', '_blank')}>
-          <div className="w-8 text-center pt-1 select-none cursor-pointer">📍</div>
-          <div className="ml-4 flex-1">
+        <div className="flex items-start mb-3">
+          <div className="w-8 text-center pt-1 select-none cursor-default">📍</div>
+          <a href="https://maps.app.goo.gl/omKfaqHqrSPN3oFR8" className="ml-4 text-blue-500 hover:underline flex-1">
             <p>Level 2, Health Screening Centre</p>
             <p>St. Anne Mother and Child Centre</p>
             <p>820 Thomson Road S574623</p>
-          </div>
+          </a>
         </div>
 
         {/* Email with letter emoji */}
-        <div className="flex items-center mb-3" onClick={() => window.open('mailto:hsc@mtalvernia.sg', '_blank')}>
-          <div className="w-8 text-center select-none cursor-pointer">💌</div>
-          <div className="ml-4 text-blue-500">
+        <div className="flex items-center mb-3">
+          <div className="w-8 text-center select-none cursor-default">💌</div>
+          <a href='mailto:hsc@mtalvernia.sg' className="ml-4 text-blue-500 hover:underline">
             <p>hsc@mtalvernia.sg</p>
-          </div>
+          </a>
         </div>
 
         {/* Whatsapp number with chat icon */}
-        <div className="flex items-center mb-3" onClick={() => window.open('https://wa.me/6598191303', '_blank')}>
+        <div className="flex items-center mb-3">
           <img
             src="./assets/whatsapp.png"
             alt="WhatsApp"
-            className="w-6 h-6 ml-1 cursor-pointer" // Adjusted size for better alignment
+            className="w-6 h-6 ml-1 cursor-default" // Adjusted size for better alignment
           />
-          <div className="ml-4 text-blue-500">
+          <a href='https://wa.me/6598191303' className="ml-4 text-blue-500 hover:underline">
             <p>+65 9819 1303</p>
-          </div>
+          </a>
         </div>
 
         {/* Phone number with phone icon */}
-        <div className="flex items-center mb-3" onClick={() => window.open('tel:+6562476215', '_blank')}>
-        <div className="w-8 text-center select-none cursor-pointer">☎️</div>
-          <div className="ml-4 text-blue-500">
+        <div className="flex items-center mb-3">
+        <div className="w-8 text-center select-none cursor-default">☎️</div>
+          <a href='tel:+6562476215' className="ml-4 text-blue-500 hover:underline">
             <p>+65 6247 6215</p>
-          </div>
+          </a>
         </div>
 
         {/* Fax number with fax icon */}

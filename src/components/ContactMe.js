@@ -68,7 +68,7 @@ const ContactOption = ({ icon, name, value, link }) => {
         <h3>{name}</h3>
       </div>
       {link ? (
-        <a href={link} className="text-blue-500 hover:underline">
+        <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
           {value}
         </a>
       ) : (
@@ -201,7 +201,7 @@ ${appointmentType !== "" ? ("I would like to schedule a " + appointmentType.toLo
 
       <div className="w-full flex justify-center gap-4 text-center">
         <div className="w-fit relative p-2 bg-white border rounded-xl shadow-md focus:outline-none focus:ring-2 focus:ring-blue-300">
-          <a href={emailLink()}>
+          <a href={emailLink()} target="_blank" rel="noopener noreferrer">
             <h3 className="">
               Open in your Email Service
             </h3>

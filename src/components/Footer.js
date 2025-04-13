@@ -13,7 +13,7 @@ const Footer = () => {
         {/* Address with pin emoji and gray square */}
         <div className="flex items-start mb-3">
           <div className="w-8 text-center pt-1 select-none cursor-default">📍</div>
-          <a href="https://maps.app.goo.gl/omKfaqHqrSPN3oFR8" className="ml-4 text-blue-500 hover:underline flex-1">
+          <a href="https://maps.app.goo.gl/omKfaqHqrSPN3oFR8" target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline flex-1">
             <p>Level 2, Health Screening Centre</p>
             <p>St. Anne Mother and Child Centre</p>
             <p>820 Thomson Road S574623</p>
@@ -23,7 +23,7 @@ const Footer = () => {
         {/* Email with letter emoji */}
         <div className="flex items-center mb-3">
           <div className="w-8 text-center select-none cursor-default">💌</div>
-          <a href='mailto:hsc@mtalvernia.sg' className="ml-4 text-blue-500 hover:underline">
+          <a href='mailto:hsc@mtalvernia.sg' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
             <p>hsc@mtalvernia.sg</p>
           </a>
         </div>
@@ -35,7 +35,7 @@ const Footer = () => {
             alt="WhatsApp"
             className="w-6 h-6 ml-1 cursor-default" // Adjusted size for better alignment
           />
-          <a href='https://wa.me/6598191303' className="ml-4 text-blue-500 hover:underline">
+          <a href='https://wa.me/6598191303' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
             <p>+65 9819 1303</p>
           </a>
         </div>
@@ -43,7 +43,7 @@ const Footer = () => {
         {/* Phone number with phone icon */}
         <div className="flex items-center mb-3">
         <div className="w-8 text-center select-none cursor-default">☎️</div>
-          <a href='tel:+6562476215' className="ml-4 text-blue-500 hover:underline">
+          <a href='tel:+6562476215' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
             <p>+65 6247 6215</p>
           </a>
         </div>

@@ -50,8 +50,8 @@ const Footer = () => {
         {/* Phone number with phone icon */}
         <div className="flex items-center mb-3">
         <div className="w-8 text-center select-none cursor-default">☎️</div>
-          <a href='tel:+6562476215' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
-            <p>+65 6247 6215</p>
+          <a href='tel:+6563476215' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
+            <p>+65 6347 6215</p>
           </a>
         </div>
 

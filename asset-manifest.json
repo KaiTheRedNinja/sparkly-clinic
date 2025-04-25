@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.577de6f9.css",
-    "main.js": "/static/js/main.f629e731.js",
+    "main.js": "/static/js/main.894fd37e.js",
     "static/js/453.8870dfe2.chunk.js": "/static/js/453.8870dfe2.chunk.js",
     "static/media/GlacialIndifference-Regular.otf": "/static/media/GlacialIndifference-Regular.663a1c12d079e631b0b2.otf",
     "static/media/GlacialIndifference-Bold.otf": "/static/media/GlacialIndifference-Bold.c085c7b0e486e3c99b11.otf",
     "index.html": "/index.html",
     "main.577de6f9.css.map": "/static/css/main.577de6f9.css.map",
-    "main.f629e731.js.map": "/static/js/main.f629e731.js.map",
+    "main.894fd37e.js.map": "/static/js/main.894fd37e.js.map",
     "453.8870dfe2.chunk.js.map": "/static/js/453.8870dfe2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.577de6f9.css",
-    "static/js/main.f629e731.js"
+    "static/js/main.894fd37e.js"
   ]
 }

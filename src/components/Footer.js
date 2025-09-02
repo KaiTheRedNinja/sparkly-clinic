@@ -30,8 +30,8 @@ const Footer = () => {
         {/* Email with letter emoji */}
         <div className="flex items-center mb-3">
           <div className="w-8 text-center select-none cursor-default">💌</div>
-          <a href='mailto:hsc@mtalvernia.sg' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
-            <p>hsc@mtalvernia.sg</p>
+          <a href='mailto:newappts.spark@gmail.com' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
+            <p>newappts.spark@gmail.com</p>
           </a>
         </div>
 
@@ -53,14 +53,6 @@ const Footer = () => {
           <a href='tel:+6563476215' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
             <p>+65 6347 6215</p>
           </a>
-        </div>
-
-        {/* Fax number with fax icon */}
-        <div className="flex items-center mb-8" title="Fax"> {/* Added mb-6 for vertical space */}
-        <div className="w-8 text-center select-none cursor-default">📠</div>
-          <div className="ml-4">
-            <p>+65 6250 6481 (for fax)</p>
-          </div>
         </div>
 
         {/* Clinic hours with clock icon */}

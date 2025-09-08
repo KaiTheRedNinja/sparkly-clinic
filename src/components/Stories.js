@@ -72,6 +72,10 @@ const Stories = () => {
             title="The Girl who Teaches me Hope" 
             url="https://debbiecorner.wordpress.com"
           />
+          <ExternalLinkCard 
+            title="The Boy who Loves" 
+            url="/pdfs/The boy who loves.pdf"
+          />
         </div>
       </div>
     </div>

@@ -7,12 +7,12 @@ const AboutMe = () => {
       <div className="relative">
         <img 
           src="./assets/profile.jpeg"
-          alt="Lee Ye Le's Profile" 
+          alt="Lee Le Ye's Profile" 
           className="roundedBox md:float-left mr-8 mb-4 w-full sm:max-w-xs md:max-w-xs"
         />
         {/* Name - Top right on desktop */}
         <h1 className="mb-2 text-left md:text-left">
-          Lee Ye Le
+          Lee Le Ye
         </h1>
         
         {/* Titles - Below name */}

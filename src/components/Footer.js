@@ -14,9 +14,8 @@ const Footer = () => {
         <div className="flex items-start w-full mb-3 space-x-4">
           <div className="w-8 text-center pt-1 select-none cursor-default">📍</div>
           <a href="https://maps.app.goo.gl/omKfaqHqrSPN3oFR8" target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
-            <p>Level 2, Health Screening Centre</p>
-            <p>St. Anne Mother and Child Centre</p>
-            <p>820 Thomson Road S574623</p>
+            <p>Bukit Batok St 21 S650213</p>
+            <p>Blk 213, #01-209</p>
           </a>
           <div>
             <img
@@ -42,16 +41,16 @@ const Footer = () => {
             alt="WhatsApp"
             className="w-6 h-6 ml-1 cursor-default" // Adjusted size for better alignment
           />
-          <a href='https://wa.me/6598191303' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
-            <p>+65 9819 1303</p>
+          <a href='https://wa.me/6589623120' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
+            <p>+65 8962 3120</p>
           </a>
         </div>
 
         {/* Phone number with phone icon */}
         <div className="flex items-center mb-3">
         <div className="w-8 text-center select-none cursor-default">☎️</div>
-          <a href='tel:+6563476215' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
-            <p>+65 6347 6215</p>
+          <a href='tel:+6562983242' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
+            <p>+65 6298 3242</p>
           </a>
         </div>
 

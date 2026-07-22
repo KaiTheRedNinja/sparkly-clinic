@@ -19,9 +19,9 @@ const Footer = () => {
           </a>
           <div>
             <img
-              src="./assets/mountAlogo.png"
+              src="./assets/logos/mountAlogo.png"
               alt="Mount Alvernia Hospital Logo"
-              className="w-16 h-16 rounded-lg ml-4 cursor-pointer"
+              className="h-16 rounded-lg ml-4 cursor-pointer"
             />
           </div>
         </div>

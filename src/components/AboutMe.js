@@ -1,5 +1,48 @@
 import React from 'react';
 
+const HospitalCard = ({ name, logo }) => {
+  return (
+    <div className="rounded-xl bg-[#FAF7ED] flex overflow-hidden">
+      <div className="p-4 text-left w-full">
+        <h4 className="font-bold text-gray-800">
+          {name}
+        </h4>
+      </div>
+
+      <div className="bg-white p-6 flex items-left justify-left w-full ml-auto h-30">
+        <img
+          src={logo}
+          alt={`${name} logo`}
+          className="object-contain max-w-100 h-full"
+        />
+      </div>
+    </div>
+  );
+};
+
+const hospitals = [
+  {
+    name: "Gleneagles Hospital",
+    logo: "./assets/logos/gleneagleslogo.png"
+  },
+  {
+    name: "Mount Alvernia Hospital",
+    logo: "./assets/logos/mountAlogo.png"
+  },
+  {
+    name: "Mount Elizabeth Novena",
+    logo: "./assets/logos/mountElogo.png"
+  },
+  {
+    name: "Mount Elizabeth (Orchard)",
+    logo: "./assets/logos/mountElogo.png"
+  },
+  {
+    name: "Thomson Medical Centre",
+    logo: "./assets/logos/thomsonlogo.png"
+  }
+];
+
 const AboutMe = () => {
   return (
     <section id="aboutme" className="w-full bg-[#DAEBD6] py-8 px-4 md:py-16 md:px-8">
@@ -22,6 +65,23 @@ const AboutMe = () => {
           <h3 className="">MRCPCH (UK), FAMS (S'pore)</h3>
           <h3 className="">Medical director at SPARK (Singapore PAediatric caRe for Kids)</h3>
           {/* Add more titles as needed */}
+        </div>
+
+        <div className="flex mt-4 mb-4 space-x-4">
+          <a href="https://linkedin.com/in/le-ye-lee-929992113" target="_blank" rel="noopener noreferrer" class="roundedHoverBox w-12 h-12 cursor-pointer">
+            <img
+              src="./assets/linkedIn.png"
+              alt="LinkedIn"
+              className="rounded-xl"
+            />
+          </a>
+          <a href="https://www.researchgate.net/profile/Le-Lee" target="_blank" rel="noopener noreferrer" class="roundedHoverBox w-12 h-12 cursor-pointer">
+            <img 
+              src="./assets/researchGate.jpeg"
+              alt="Research Gate"
+              className="rounded-xl"
+            />
+          </a>
         </div>
         
         {/* About Text - Wraps around on desktop */}
@@ -51,24 +111,28 @@ const AboutMe = () => {
             volunteered in Ang Kor Children’s Hospital (Siem Reap) and Chenla Children’s Healthcare, Kratie for
             skills teaching at their neonatal units. Her hobbies include cycling and fund raising during these activities, solving puzzles and also reading.
           </p>
+          <br/>
+          <p className="leading-relaxed">
+            <i>Dr lee is accredited to practice neonatology and paediatric medicine as inpatient at the following hospitals:</i>
+            <div className="
+              mt-4
+              grid
+              grid-cols-1
+              sm:grid-cols-2
+              lg:grid-cols-3
+              xl:grid-cols-4
+              gap-6
+            ">
+              {hospitals.map((hospital) => (
+                <HospitalCard
+                  key={hospital.name}
+                  name={hospital.name}
+                  logo={hospital.logo}
+                />
+              ))}
+            </div>
+          </p>
           {/* Add more paragraphs as needed */}
-        </div>
-
-        <div className="flex mt-4 space-x-4">
-          <a href="https://linkedin.com/in/le-ye-lee-929992113" target="_blank" rel="noopener noreferrer" class="roundedHoverBox w-12 h-12 cursor-pointer">
-            <img
-              src="./assets/linkedIn.png"
-              alt="LinkedIn"
-              className="rounded-xl"
-            />
-          </a>
-          <a href="https://www.researchgate.net/profile/Le-Lee" target="_blank" rel="noopener noreferrer" class="roundedHoverBox w-12 h-12 cursor-pointer">
-            <img 
-              src="./assets/researchGate.jpeg"
-              alt="Research Gate"
-              className="rounded-xl"
-            />
-          </a>
         </div>
       </div>
     </div>

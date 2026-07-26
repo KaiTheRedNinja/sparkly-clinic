@@ -113,7 +113,7 @@ const AboutMe = () => {
           </p>
           <br/>
           <p className="leading-relaxed">
-            <i>Dr lee is accredited to practice neonatology and paediatric medicine as inpatient at the following hospitals:</i>
+            Dr Lee is accredited to practice neonatology and paediatric medicine as inpatient at the following hospitals:
             <div className="
               mt-4
               grid

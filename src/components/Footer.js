@@ -13,9 +13,9 @@ const Footer = () => {
         {/* Address with pin emoji and gray square */}
         <div className="flex items-start w-full mb-3 space-x-4">
           <div className="w-8 text-center pt-1 select-none cursor-default">📍</div>
-          <a href="https://maps.app.goo.gl/omKfaqHqrSPN3oFR8" target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
-            <p>Bukit Batok St 21 S650213</p>
-            <p>Blk 213, #01-209</p>
+          <a href="https://maps.app.goo.gl/hLWR4Xpqe2BHERkR9" target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
+            <p>271 Holland Ave</p>
+            <p>Singapore 278991</p>
           </a>
           <div>
             <img
@@ -29,8 +29,8 @@ const Footer = () => {
         {/* Email with letter emoji */}
         <div className="flex items-center mb-3">
           <div className="w-8 text-center select-none cursor-default">💌</div>
-          <a href='mailto:newappts.spark@gmail.com' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
-            <p>newappts.spark@gmail.com</p>
+          <a href='mailto:enquires.holland@petitepractice.com' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
+            <p>enquires.holland@petitepractice.com</p>
           </a>
         </div>
 

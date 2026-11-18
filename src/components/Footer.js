@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Header - "SPARK" with no icon */}
         <div className="flex mb-4">
           <div className="w-8"></div> {/* Empty space for icon alignment */}
-          <h3 className="ml-4">SPARK</h3>
+          <h3 className="ml-4">SPARK @ Petite Practice Holland</h3>
         </div>
 
         {/* Address with pin emoji and gray square */}
@@ -17,13 +17,13 @@ const Footer = () => {
             <p>271 Holland Ave</p>
             <p>Singapore 278991</p>
           </a>
-          <div>
+          {/* <div>
             <img
               src="./assets/logos/mountAlogo.png"
               alt="Mount Alvernia Hospital Logo"
               className="h-16 rounded-lg ml-4 cursor-pointer"
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Email with letter emoji */}
@@ -41,16 +41,16 @@ const Footer = () => {
             alt="WhatsApp"
             className="w-6 h-6 ml-1 cursor-default" // Adjusted size for better alignment
           />
-          <a href='https://wa.me/6589623120' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
-            <p>+65 8962 3120</p>
+          <a href='https://wa.me/6580964871' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
+            <p>+65 8096 4871</p>
           </a>
         </div>
 
         {/* Phone number with phone icon */}
         <div className="flex items-center mb-3">
         <div className="w-8 text-center select-none cursor-default">☎️</div>
-          <a href='tel:+6562983242' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
-            <p>+65 6298 3242</p>
+          <a href='tel:+6567300963' target="_blank" rel="noopener noreferrer" className="ml-4 text-blue-500 hover:underline">
+            <p>+65 6730 0963</p>
           </a>
         </div>
 

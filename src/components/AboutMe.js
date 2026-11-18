@@ -116,6 +116,7 @@ const AboutMe = () => {
             Dr Lee is accredited to practice neonatology and paediatric medicine as inpatient at the following hospitals:
             <div className="
               mt-4
+              mb-4
               grid
               grid-cols-1
               sm:grid-cols-2
@@ -131,6 +132,8 @@ const AboutMe = () => {
                 />
               ))}
             </div>
+
+            Dr Lee has outpatient clinics at <u><a href="https://petitepractice.com">Petite Practice Holland</a></u>.
           </p>
           {/* Add more paragraphs as needed */}
         </div>

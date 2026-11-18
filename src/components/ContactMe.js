@@ -83,17 +83,19 @@ const ContactOptions = () => {
     <div className="w-full lg:w-1/2">
       <div className="hidden lg:flex flex-col space-y-4">
         <ContactOption name="💌 Email" value="enquires.holland@petitepractice.com" link="mailto:enquires.holland@petitepractice.com" />
-        <ContactOption name="WhatsApp" icon="./assets/whatsapp.png" value="+65 8962 3120" link="https://wa.me/6589623120" />
-        <ContactOption name="☎️ Phone" value="+65 6298 3242" link="tel:6562983242" />
+        <ContactOption name="WhatsApp" icon="./assets/whatsapp.png" value="+65 8096 4871" link="https://wa.me/6580964871" />
+        <ContactOption name="☎️ Phone" value="+65 6730 0963" link="tel:6567300963" />
+        <ContactOption name="ℹ️ More Info" value="petitepractice.com" link="https://petitepractice.com" />
       </div>
 
       <div className="lg:hidden flex flex-col space-y-4">
         <div className="grid grid-cols-2 gap-4">
           <ContactOption name="💌 Email" value="enquires.holland@petitepractice.com" link="mailto:enquires.holland@petitepractice.com" />
-          <ContactOption name="WhatsApp" icon="./assets/whatsapp.png" value="+65 8962 3120" link="https://wa.me/6589623120" />
+          <ContactOption name="WhatsApp" icon="./assets/whatsapp.png" value="+65 8096 4871" link="https://wa.me/6580964871" />
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <ContactOption name="☎️ Phone" value="+65 6298 3242" link="tel:6562983242" />
+          <ContactOption name="☎️ Phone" value="+65 6730 0963" link="tel:6567300963" />
+          <ContactOption name="ℹ️ More Info" value="petitepractice.com" link="https://petitepractice.com" />
         </div>
       </div>
     </div>
